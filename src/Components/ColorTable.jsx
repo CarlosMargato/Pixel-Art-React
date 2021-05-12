@@ -10,11 +10,21 @@ class ColorTable extends Component{
       </td>
       </tr>
       <tr>
+        <td>
+        <select>
+          <option selected value='prime'>primarias</option>
+          <option value='second'>secundarias</option>
+          <option value='all'>todas</option>
+          <option value='random'>randomicas</option>
+        </select>
+        </td>
+      </tr>
+      <tr>
         <td>Azul</td>
         <td>Vermelho</td>
         <td>Verde</td>
       </tr>
-      </table>
+    </table>
     );
   }
 }

@@ -1,11 +1,20 @@
 import React, {Component} from 'react';
 import Pixel from './Pixel';
-import Forms from './Forms';
 
 class Line extends Component {
+
   render() {
+
+    const { lineArray } =this.props;
+
     return(
-      <tr><Pixel /></tr>
+      <>
+      {lineArray.map((item) => {
+        return(
+          <tr key={item.toString}><Pixel pixelGroup={ lineArray }/></tr>
+          )
+      })}
+      </>
     )
   }
 }

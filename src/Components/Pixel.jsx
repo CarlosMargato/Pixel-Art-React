@@ -1,10 +1,17 @@
 import React, {Component} from 'react';
-import Forms from './Forms';
+import classes from './Pixel.css';
 
 class Pixel extends Component {
   render(){
+    const { pixelGroup } =this.props;
     return(
-      <td>1</td>
+      <>
+      {pixelGroup.map((item) => {
+        return(
+          <td key={item.toString} className={classes.pixel}>{item}</td>
+          )
+      })}
+      </>
     )
   }
 }
