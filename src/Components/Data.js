@@ -108,6 +108,18 @@ const colors = [
    '#4B0082',
    '#DA70D6',
    '#FFB6C1',
+  ],
+  [
+    '#FFFFFF',
+    '#C0C0C0',
+    '#808080',
+    '#FFFAFA',
+  ],
+  [
+    '#FFFFFF',
+    '#C0C0C0',
+    '#808080',
+    '#FFFAFA',
   ]
 ]
 
