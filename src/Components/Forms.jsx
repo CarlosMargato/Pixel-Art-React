@@ -13,19 +13,25 @@ class Forms extends Component {
   }
 
 handleResizer({target: {value}}) { //pra descontrutruir {target: {value}}
-  this.setState( () => { 
-    return {counter: 0}
-   })
+ if (value < 5){
+    this.setState( () => { 
+     return {counter: 5}
+    })
+ }
+  if (value >= 5){
   this.setState( () => { 
    return {counter: value}
-  })}; //({counter:value})
+  }); //({counter:value})
+}
+if(value > 100){
+    this.setState( () => { 
+     return {counter: 100}
+    })}
+}
 
 handleClicker(evento){
   evento.preventDefault();
 const size = this.state.counter;
-this.setState( () => { 
-  return {array: [] }
-})
 const arrayContent = this.state.array;
 for (let i = 0; i < size; i +=1) {
   arrayContent.push(i+1)
@@ -51,12 +57,15 @@ this.setState(() => {
           id='sizeTable'
           onChange={this.handleResizer}
           placeholder='digite a resolução do desenho'
+          min='5'
+          minLength='5'
+          max='100'
         />
         <button type='submit' onClick={this.handleClicker}>Alterar</button>
         <button type='button'>Apagar</button>
       </form>
         <Table Array={ array } />
-      </div>
+    </div>
     )
 
   }

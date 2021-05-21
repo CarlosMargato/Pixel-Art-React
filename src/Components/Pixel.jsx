@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import classes from './Pixel.css';
+import './pixel-module.css';
 
 class Pixel extends Component {
   render(){
@@ -8,7 +8,7 @@ class Pixel extends Component {
       <>
       {pixelGroup.map((item) => {
         return(
-          <td key={item.toString} className={classes.pixel}>{item}</td>
+          <td key={item.toString} className='pixel'>{item}</td>
           )
       })}
       </>

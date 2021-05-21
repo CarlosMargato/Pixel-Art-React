@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Colors from './Data';
+import './colorTable.css'
 
 class ColorTable extends Component{
   constructor(props) {
@@ -20,23 +21,28 @@ class ColorTable extends Component{
     return(
       <table>
         <tr>
-          <td>
+          <td colSpan='18'>
       <h3>Paleta de Cores</h3>
       </td>
       </tr>
       <tr>
-        <td>
+        <td colSpan='18'>
+          Escolha a sua paleta de cores:
+        </td>
+        </tr>
+        <tr>
+        <td colSpan='18'>
         <select onChange={ this.handleChange }>
-          <option selected value='0'>primarias</option>
-          <option value='1'>secundarias</option>
+          <option value='0'>Básicas</option>
+          <option value='1'>Tonalidades</option>
           <option value='2'>todas</option>
           <option value='3'>randomicas</option>
         </select>
         </td>
       </tr>
-      <tr>
+      <tr className='pallete'>
         {Colors[selection].map((color) => {
-          return (<td bgcolor={ color }>cores</td>)
+          return (<td key={ color } value ={ color }  bgcolor={ color } className={`${color} color`} ></td>)
         })
       }
       </tr>
