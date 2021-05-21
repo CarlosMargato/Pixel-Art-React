@@ -1,0 +1,21 @@
+header{
+  display: inline-block;
+  border: 1px solid blue;
+  border-radius: 18px;
+  box-shadow: gray 10px 7px;
+}
+div {
+  display: inline;
+  border-radius: 50px;
+  margin: 10px;
+  padding: 5px 15px;
+}
+.blue {
+  background-color: #0000FF;
+}
+.red {
+  background-color: #FF0000;
+}
+.yellow {
+  background-color: #ffd000;
+}

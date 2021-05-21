@@ -1,0 +1,10 @@
+.color {
+  border: 0.1em solid #000000;
+  padding: 10px;
+  border-radius: 60px;
+}
+
+.pallete{
+  display: inline;
+  margin: 25px;
+}
